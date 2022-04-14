@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Open+Sans:wght@300&display=swap');
+*{
+	box-sizing : border-box;
+}
+
+
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #fff;
+  color: #333;
+	font-family: 'Courier Prime', monospace;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.frame{
+	background: linear-gradient(to top right, #43389F, #4ec6ca);
+}
+.hundred, .days, .css-challenge{
+	color : white;
+	font-weight: bold;
+}
+.days{
+	font-size:80px;
+	line-height: 80px;
+	letter-spacing:2px;
+}
+.css-challenge{
+	font-size : 23px;
+line-height: 23px;
+	margin-top: -10px;
+	letter-spacing: 1.5px;
+}
+.hundred{
+		display : flex;
+	}
+.one-straight{
+	height : 110px;
+	width : 25px;
+	background-color: white;
+	position : relative;
+	border-radius : 3px;
+}
+.one-slant{
+	height : 50px;
+	width : 22px;
+	background-color: white;
+	transform : rotate(45deg);
+	position : absolute;
+	left : -20px;
+	z-index : -1;
+	border-radius : 5px;	
+}
+.zero{
+	height: 110px;
+	width : 110px;
+	border-radius : 50%;
+	border: 30px solid white;
+	background : transparent;	
+	margin-left : -10px;
+	z-index: -1;
+}
+
+.zero:last-child{
+	margin-left : -15px;
+	z-index: -2;
+}
+.digit{
+	box-shadow: 0 0 13px 0 rgb(0 0 0 / 20%);
+}
