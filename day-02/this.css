@@ -1,0 +1,148 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #fff;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.frame{
+	background: #3FAF82;
+}
+.hamburger{
+	display: flex;
+	flex-direction: column;
+	row-gap: 15px;
+}
+.line{
+	height: 8px;
+	width: 80px;
+	background: white;
+	box-shadow: 0 0 13px rgba(0,0,0, 20%);
+	border-radius: 5px;
+}
+
+.animation .line:first-child{
+	animation-name: first;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes first{
+	50%{
+		transform: translate(0, 24px);
+	}
+	100%{
+		transform:translate(0, 24px) rotate(45deg);
+	}
+}
+
+.animation .line:last-child{
+	animation-name: last;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes last{
+	50%{
+		transform: translate(0, -24px);
+	}
+	100%{
+		transform: translate(0, -24px) rotate(135deg);
+	}
+}
+
+.animation .line:nth-child(2){
+	animation-name: middle;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	
+}
+
+@keyframes middle{
+	50%{
+		display:flex;
+		align-self: center;
+		width: 5px;
+	}
+	100%{
+		display:flex;
+		align-self: center;
+		width: 0px;
+	}
+}
+
+.revAnimation .line:first-child{
+	animation-name: rev-first;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes rev-first{
+	0%{
+		transform:translate(0, 24px) rotate(45deg);
+	}
+	50%{
+		transform: translate(0, 24px);
+	}
+}
+
+
+.revAnimation .line:last-child{
+	animation-name: rev-last;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes rev-last{
+	0%{
+		transform: translate(0, -24px) rotate(135deg);
+	}
+	50%{
+		transform: translate(0, -24px);
+	}
+}
+
+.revAnimation .line:nth-child(2){
+	animation-name: rev-middle;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes rev-middle{
+	0%{
+		display:flex;
+		align-self: center;
+		width: 0px;
+	}
+	100%{
+		display:flex;
+		align-self: center;
+		width: 80px;
+	}
+}
